@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.3.00.100">
+    <devices>
+        <dev id="4ED50680-B630-4d6c-8918-572B76F07351" name="PC2" poe="0" model="PC" settings=" -simpc_hostname pc2  -simpc_ip 0.0.0.0  -simpc_mask 0.0.0.0  -simpc_gateway 0.0.0.0  -simpc_mac 54-89-98-A8-68-66  -simpc_mc_dstip 0.0.0.0  -simpc_mc_dstmac 00-00-00-00-00-00  -simpc_dns1 0.0.0.0  -simpc_dns2 0.0.0.0  -simpc_ipv6 ::  -simpc_prefix 128  -simpc_gatewayv6 ::  -simpc_dhcp_state 1  -simpc_dhcpv6_state 0  -simpc_dns_auto_state 1  -simpc_igmp_version 1  -simpc_group_ip_start 0.0.0.0  -simpc_src_ip_start 0.0.0.0  -simpc_group_num 0  -simpc_group_step 0  -simpc_src_num 0  -simpc_src_step 0  -simpc_type MODE_IS_INCLUDE " system_mac="54-89-98-A8-68-66" com_port="0" bootmode="0" cx="114.000000" cy="154.000000" edit_left="141" edit_top="208">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
+            </slot>
+        </dev>
+        <dev id="A889BEEF-0EDE-4be0-A94C-2610433E5549" name="PC1" poe="0" model="PC" settings=" -simpc_hostname pc1  -simpc_ip 0.0.0.0  -simpc_mask 0.0.0.0  -simpc_gateway 0.0.0.0  -simpc_mac 54-89-98-F7-4E-19  -simpc_mc_dstip 0.0.0.0  -simpc_mc_dstmac 00-00-00-00-00-00  -simpc_dns1 0.0.0.0  -simpc_dns2 0.0.0.0  -simpc_ipv6 ::  -simpc_prefix 128  -simpc_gatewayv6 ::  -simpc_dhcp_state 1  -simpc_dhcpv6_state 0  -simpc_dns_auto_state 1  -simpc_igmp_version 1  -simpc_group_ip_start 0.0.0.0  -simpc_src_ip_start 0.0.0.0  -simpc_group_num 0  -simpc_group_step 0  -simpc_src_num 0  -simpc_src_step 0  -simpc_type MODE_IS_INCLUDE " system_mac="54-89-98-F7-4E-19" com_port="0" bootmode="0" cx="312.000000" cy="37.000000" edit_left="300" edit_top="78">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
+            </slot>
+        </dev>
+        <dev id="959A3816-8043-4738-B00E-B6870A197E72" name="SW1" poe="0" model="S3700" settings="" system_mac="4C-1F-CC-47-20-AB" com_port="2001" bootmode="0" cx="311.000000" cy="152.000000" edit_left="338" edit_top="206">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="22" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+        <dev id="7444C29D-FF99-4b38-9E4E-E94248D938D9" name="R1" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-65-47-80" com_port="2000" bootmode="0" cx="472.000000" cy="149.000000" edit_left="499" edit_top="202">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="7444C29D-FF99-4b38-9E4E-E94248D938D9" destDeviceID="959A3816-8043-4738-B00E-B6870A197E72">
+            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="1" srcBoundRect_X="455.823730" srcBoundRect_Y="176.804520" srcOffset_X="-30.000000" srcOffset_Y="-22.000000" tarIndex="22" tarBoundRectIsMoved="1" tarBoundRect_X="381.176270" tarBoundRect_Y="178.195480" tarOffset_X="-16.000000" tarOffset_Y="-22.000000" />
+        </line>
+        <line srcDeviceID="959A3816-8043-4738-B00E-B6870A197E72" destDeviceID="A889BEEF-0EDE-4be0-A94C-2610433E5549">
+            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="1" srcBoundRect_X="338.375488" srcBoundRect_Y="135.817871" srcOffset_X="-80.000000" srcOffset_Y="-2.000000" tarIndex="0" tarBoundRectIsMoved="1" tarBoundRect_X="338.624512" tarBoundRect_Y="107.182137" tarOffset_X="-85.000000" tarOffset_Y="-3.000000" />
+        </line>
+        <line srcDeviceID="959A3816-8043-4738-B00E-B6870A197E72" destDeviceID="4ED50680-B630-4d6c-8918-572B76F07351">
+            <interfacePair lineName="Copper" srcIndex="1" srcBoundRectIsMoved="1" srcBoundRect_X="294.818451" srcBoundRect_Y="179.438385" srcOffset_X="-63.000000" srcOffset_Y="9.000000" tarIndex="0" tarBoundRectIsMoved="1" tarBoundRect_X="184.181534" tarBoundRect_Y="180.561615" tarOffset_X="-13.000000" tarOffset_Y="-20.000000" />
+        </line>
+    </lines>
+    <shapes />
+    <txttips>
+        <txttip left="429" top="133" right="516" bottom="150" content="dhcp server" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="8" top="403" right="503" bottom="482" content="[R1]dhcp enable &#x0D;&#x0A;[R1]int g0/0/0&#x0D;&#x0A;[R1-GigabitEthernet0/0/0]dhcp select interface&#x0D;&#x0A;[R1-GigabitEthernet0/0/0]dhcp server dns-list 1.1.1.1&#x0D;&#x0A;[R1-GigabitEthernet0/0/0]dhcp server lease day 0 hour 0 minute 15" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="1" top="254" right="322" bottom="396" content="[SW1]anti-attack abnormal enable&#x0D;&#x0A;[SW1]anti-attack enable&#x0D;&#x0A;[SW1]anti-attack abnormal enable&#x0D;&#x0A;[SW1]anti-attack fragment enable&#x0D;&#x0A;[SW1]anti-attack tcp-syn enable&#x0D;&#x0A;[SW1]anti-attack udp-flood enable&#x0D;&#x0A;[SW1]anti-attack icmp-flood enable&#x0D;&#x0A;[SW1]dis anti-attack statistics&#x0D;&#x0A;[SW1]reset anti-attack statistics abnormal" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="370" top="59" right="404" bottom="76" content="dhcp" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="127" top="225" right="161" bottom="242" content="dhcp" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-7278960" charset="1" />
+        <txttip left="12" top="10" right="190" bottom="58" content="Anti Attack&#x0D;&#x0A;Author: Arie Budiansyah&#x0D;&#x0A;Ver.1" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-1" txtbkcolor="-16744256" charset="1" />
+        <txttip left="537" top="5" right="994" bottom="240" content="anti-attack abnormal enable&#x0D;&#x0A;anti-attack enable&#x0D;&#x0A;anti-attack abnormal enable&#x0D;&#x0A;anti-attack fragment enable&#x0D;&#x0A;anti-attack tcp-syn enable&#x0D;&#x0A;anti-attack udp-flood enable&#x0D;&#x0A;anti-attack icmp-flood enable&#x0D;&#x0A;&#x0D;&#x0A;&#x0D;&#x0A;The device directly discards packets of the following types:&#x0D;&#x0A;-Flood attacks from IP null payload packets&#x0D;&#x0A;-Attacks from IGMP null payload packets&#x0D;&#x0A;-LAND attacks&#x0D;&#x0A;-Smurf attacks&#x0D;&#x0A;-Attacks from packets with invalid TCP flag bits" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-65281" charset="1" />
+        <txttip left="508" top="251" right="1109" bottom="455" content="[Huawei]dis anti-attack statistics &#x0D;&#x0A;Packets Statistic Information:&#x0D;&#x0A;-------------------------------------------------------------------------------&#x0D;&#x0A;AntiAtkType  TotalPacketNum        DropPacketNum         PassPacketNum&#x0D;&#x0A;             (H)        (L)        (H)        (L)        (H)        (L)        &#x0D;&#x0A;-------------------------------------------------------------------------------&#x0D;&#x0A;URPF          0          0          0          0          0          0          &#x0D;&#x0A;Abnormal      0          0          0          0          0          0          &#x0D;&#x0A;Fragment      0          0          0          0          0          0          &#x0D;&#x0A;Tcp-syn       0          0          0          0          0          0          &#x0D;&#x0A;Udp-flood     0          0          0          0          0          0          &#x0D;&#x0A;Icmp-flood    0          0          0          0          0          0          &#x0D;&#x0A;--------------------------------------------------------" fontname="Consolas" fontstyle="0" editsize="100" txtcolor="-16777216" txtbkcolor="-65281" charset="1" />
+    </txttips>
+</topo>
